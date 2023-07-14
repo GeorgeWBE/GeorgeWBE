@@ -11,6 +11,8 @@
 
         .bg-image 
         {
+            z-index: -1;
+            
             /* The image used */
             background-image: url("Images_Files/Page_Background.png");
 
@@ -57,90 +59,55 @@
             margin-top: 20px;
         }
 
-        *,*:after,*:before
+        #snowfall 
         {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -ms-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        .snow_wrap
-        {
-            height: 100vh;
+            position: fixed;
+            top: -100%;
+            left: 0;
             width: 100%;
-            background:url('../images/pic.jpg');
-            background-size: cover;
-            background-position: center bottom; 
-            overflow: hidden;
-            position: relative;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
         }
 
-        .snow, .snow:before, .snow:after 
+        .snowflake 
         {
             position: absolute;
-            top: -650px;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background-image: 
-            radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
-            radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
-            radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
-            radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
-            radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
-            radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
-            radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
-            radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
-            radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
-            background-size: 650px 650px;
-            animation: snow 3s linear infinite;
-            content: "";
+            background: #fff;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: snowfall linear infinite;
         }
 
-        .snow:after 
+        @keyframes snowfall 
         {
-            margin-left: -250px;
-            opacity: 0.5;
-            filter: blur(2px);
-            animation-duration: 6s;
-            animation-direction: reverse;
-        }
-
-        .snow:before 
-        {
-            margin-left: -350px;
-            opacity: 0.7;
-            filter: blur(1px);
-            animation-duration: 9s;
-            animation-direction: reverse;
-        }
-
-        @keyframes snow 
-        {
-            to 
+            0% 
             {
-                transform: translateY(650px);
+                transform: translateY(-10%);
+                opacity: 1;
+            }
+            100% 
+            {
+                transform: translateY(100vh);
+                opacity: 0;
             }
         }
+
+        
     </style>
     
 </head>
 <body>
     <div class="bg-image"></div>
-    <div class"snow-wrap">
-        <div class = "snow"> 
-
-
-        </div>
-    </div>
+    <div id="snowfall"></div>
+    <script src="JS_Files/snow.Js"></script>
     <div class="bg-text">
       <h1>George Edwards</h1>
       <p>Game developer & designer</p>
       <!-- Social media icons -->
       <div class="social-icons">
-        <a href="#" target="_blank"><img src="Images_Files/Facebook_Icon.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/avogadrogames" target="_blank"><img src="Images_Files/Instagram_Logo.png" alt="Instagram"></a>
+        <a href="https://www.artstation.com/georgedz" target="_blank"><img src="Images_Files/Artstation_Icon.png" alt="Artstation"></a>
+        <a href="https://www.instagram.com/avogadrogames" target="_blank"><img src="Images_Files/Instagram_Icon.png" alt="Instagram"></a>
         <a href="https://twitter.com/AvogadroGames" target="_blank"><img src="Images_Files/Twitter_Icon.png" alt="Twitter"></a>
         <a href="https://www.youtube.com/channel/UC9_lq2hiV3WpqT7enQbcmlQ" target="_blank"><img src="Images_Files/Youtube_Icon.png" alt="YouTube"></a>
         <!-- Add more social media icons as needed -->
@@ -148,4 +115,3 @@
     </div>
 </body>
 </html>
-
