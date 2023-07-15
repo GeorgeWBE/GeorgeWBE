@@ -19,7 +19,7 @@
             filter: blur(8px);
             -webkit-filter: blur(8px);
             box-shadow: inset 0 0 100px #ffffff;
-            height: 100%;
+            height: 100vh;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
@@ -52,8 +52,8 @@
         .content-container {
             position: relative;
             border: 3px solid #0000004f;
-            padding: 50px;
-            margin: 100px auto 0;
+            padding: 5vw;
+            margin: 10vw auto 0;
             margin-top: 2%;
             max-width: 75%;
             background-color: #ffffff8e;
@@ -74,8 +74,21 @@
 
         /* Paragraph styles */
         .content-container p {
-            padding-bottom: 32px;
-            font-size: 24px;
+            padding-bottom: 2vw;
+            font-size: 2vw;
+            line-height: 1.5;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 8vw;
+                margin: 10vw auto 0;
+            }
+
+            .content-container p {
+                font-size: 3.5vw;
+            }
         }
     </style>
 </head>
@@ -83,7 +96,7 @@
     <a href="index.html" class="back-button">Back</a>
     <div class="bg-image"></div>
     <div class="content-container">
-        <h1 style="padding-bottom: 20px; font-size: 52px;">About Me</h1>
+        <h1 style="padding-bottom: 3vw; font-size: 6vw;">About Me</h1>
         <p>
             Hi, I'm George Edwards, a game developer with a focus on programming. I have a passion for creating immersive gaming experiences through level design, 3D modeling, and coding. With over 3 years of experience in game development, I specialize in using C# and Unity to bring ideas to life.
         </p>
