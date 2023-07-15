@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Edwards Portfolio</title>
+    <link rel="stylesheet" href="CSS_Files/style.css">
+    <link rel="stylesheet" href="CSS_Files/snow.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="JS_Files/page_transition.Js" defer></script>
+
+    <style>
+        body {
+            margin: 2%;
+            padding-bottom: 50px;
+        }
+
+        .bg-image {
+            z-index: -1;
+            /* The image used */
+            background-image: url("Images_Files/Page_Background.png");
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            box-shadow: inset 0 0 100px #ffffff;
+            /* Full height */
+            height: 100vh;
+            /* Center and scale the image nicely */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px 12px;
+            background-color: #0000007c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: 'Comfortaa', cursive;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #000000b3;
+        }
+
+        .project {
+            margin-bottom: 50px;
+            text-align: center;
+            /* Center-align the project content */
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            margin-bottom: 20px;
+            font-size: 24px;
+            max-width: 60%;
+            /* Adjust the width as needed */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .project-images img {
+            width: 400px;
+            /* Increase the size as desired */
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .project-links {
+            text-align: center;
+        }
+
+        .project-links a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 8px 12px;
+            background-color: #0000007c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background-color: #000000b3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="index.html" class="back-button">Back</a>
+    <div class="bg-image"></div>
+    <div id="snowfall"></div>
+    <script src="JS_Files/snow.Js"></script>
+
+    <h1 style="font-size: 52px;">My Projects</h1>
+
+    <div class="project">
+        <h2 class="project-title">Tails of a Cat (RELEASED)</h2>
+        <p class="project-description">For this project, I made it as the sole, independent developer, as such I made:
+            the
+            sprites, the codebase, the levels, the design, etc. This project was made in Unity, from 2022 to early-mid
+            2023: Travel through 3 detailed worlds, and transform into different materials and use their abilities to
+            overcome different levels and enemies.</p>
+        <div class="project-images">
+            <img src="Images_Files/TOC_Logo_512.png" alt="Image 1">
+            <img src="Images_Files/H&G_Shot.jpg" alt="Image 2">
+            <img src="Images_Files/Screenshot_20230308_222815_com.Avogadro_Games.Cat_Tales.jpg" alt="Image 3">
+        </div>
+        <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.Avogadro_Games.Cat_Tales" target="_blank">Store Page</a>
+            <a href="https://www.youtube.com/watch?v=dGvH-cTgVoc&t=35s" target="_blank">Gameplay Video</a>
+        </div>
+    </div>
+
+    <div class="project">
+        <h2 class="project-title">Immersion Sector (UNRELEASED)</h2>
+        <p class="project-description">Immersion Sector is physics-based VR game, which was under development during
+            2021 to early 2022, in this project I designed multiple fully fleshed out levels, including: A gun range/shoot
+            house, a desert sandbox scene, and a city/sewer scene, which is showcased in the video below - all of these
+            scenes were optimised by me to work for PC and for mobile VR headsets (Oculus Quest 1 & 2). Lastly, I also
+            helped with general maintenance of the project within Unity, and with modelling several props </p>
+        <div class="project-images">
+            <img src="GIF_Files/IMSEC_Force.gif" alt="Image 4">
+            <img src="Images_Files/Immersion_Sector_Icon_02.png" alt="Image 5">
+        </div>
+        <div class="project-links">
+            <a href="https://store.steampowered.com/app/1676360/Immersion_Sector/" target="_blank">Steam Page</a>
+            <a href="https://youtu.be/pYd5beRe7Bo" target="_blank">Gameplay video</a>
+        </div>
+    </div>
+
+    <div class="project">
+        <h2 class="project-title">Project Silent (TO BE RELEASED)</h2>
+        <p class="project-description">For this project, I am developing it as the sole, independent developer, this
+            project is still under construction, however, so far there is a physics-based rigidbody player controller,
+            with precise control of acceleration, max speed, independent of player mass, I have also developed an
+            abstract interaction system which allows for player grabbing of kinematic objects such as guns and physics
+            object such as crates and bottles, it also allows for general interactions with environmental objects such as
+            pushing a button or opening a door. This project is planned to be released in 2024.</p>
+        <div class="project-images">
+            <img src="Images_Files/Project_Silent_01.png" alt="Image 6">
+            <img src="Images_Files/Project_Silent_02.png" alt="Image 7">
+            <img src="Images_Files/Project_Silent_03.png" alt="Image 8">
+        </div>
+        <div class="project-links">
+            <a href="https://youtu.be/z-_qvzeCfuA" target="_blank">Interaction Showcase</a>
+        </div>
+    </div>
+</body>
+
+</html>
